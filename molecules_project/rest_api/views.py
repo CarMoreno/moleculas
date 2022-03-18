@@ -24,7 +24,11 @@ class MoleculeList(APIView):
             page_size = request.query_params.get('page_size', 10)
             paginator = Paginator(molecules, page_size)
             molecule_serializer = MoleculeSerializer(paginator.page(page_number), many=True)
-            return Response(molecule_serializer.data, status=HTTP_200_OK)
+            response = {
+                "data": molecule_serializer.data,
+                "total_number_pages": paginator.num_pages
+            }
+            return Response(response, status=HTTP_200_OK)
         except EmptyPage:
             return Response({'message': 'Current page does not have data'}, status=HTTP_204_NO_CONTENT)
 
@@ -38,7 +42,11 @@ class ActivityList(APIView):
             page_size = request.query_params.get('page_size', 10)
             paginator = Paginator(activities, page_size)
             activity_serializer = ActivitySerializer(paginator.page(page_number), many=True)
-            return Response(activity_serializer.data, status=HTTP_200_OK)
+            response = {
+                "data": activity_serializer.data,
+                "total_number_pages": paginator.num_pages
+            }
+            return Response(response, status=HTTP_200_OK)
         except EmptyPage:
             return Response({'message': 'Current page does not have data'}, status=HTTP_204_NO_CONTENT)
         except Molecule.DoesNotExist:
