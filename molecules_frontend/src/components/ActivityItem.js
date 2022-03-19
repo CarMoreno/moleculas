@@ -4,36 +4,44 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Divider from '@mui/material/Divider';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import { green } from '@mui/material/colors';
+import { green, brown } from '@mui/material/colors';
 import {ArrowForward, Biotech } from '@mui/icons-material';
-import { IconButton } from '@mui/material';
+import { IconButton, ListItem } from '@mui/material';
 
 export function ActivityItem({activity}) {
     const {id, organism, relation, target_name, type, units, value} = activity
     return (
         <>
-            <ListItemButton>
+            <ListItem>
                 <ListItemAvatar>
-                    <Avatar sx={{ bgcolor: green[700] }} >
+                    <Avatar sx={{ bgcolor: brown[500] }} >
                         <Biotech />
                     </Avatar>
                 </ListItemAvatar>
                 <ListItemText
-                    primary={organism}
+                    primary={`Activity # ${id}`}
                     secondary={
                         <>
                             <Typography
-                                sx={{ display: 'inline', color: green[800], fontWeight: "bold"}}
-                                component="span"
+                                sx={{ display: 'inline', color: green[800]}}
                                 variant='body2'
                             >
-                                Id: {id}
+                                <strong>Organism:</strong> {organism} {""}
+                                <strong>Target:</strong> {target_name} {""}
+                                <strong>Type:</strong> {type} {""}
+                                <strong>Units:</strong> {units} {""}
+                                <strong>Value:</strong> {value} {""}
+                                <strong>Relation:</strong> {relation} 
                             </Typography>
-                            { ` ${"structure"}` }
+                            
+                                
+                                
+                            
+                            
                         </>
                     }
                 />
-            </ListItemButton>
+            </ListItem>
             <Divider variant="inset" component="li" />
         </>
     )

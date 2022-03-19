@@ -3,13 +3,18 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Divider from '@mui/material/Divider';
 import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
+import { useState } from 'react';
 import { green } from '@mui/material/colors';
 import { Biotech, ArrowForward } from '@mui/icons-material';
 import { IconButton, ListItemButton } from '@mui/material';
 
-export function MoleculeItem({molecule, setMolecule}) {
+export function MoleculeItem({molecule, setMolecule, setModalMolecule, setOpen}) {
     const {id, name, structure} = molecule
+
+    const handleOpenModal = () => {
+        setOpen(true)
+        setModalMolecule(molecule)
+    }
 
     return (
         <>
@@ -25,21 +30,10 @@ export function MoleculeItem({molecule, setMolecule}) {
                         <Biotech />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemButton>
+                <ListItemButton onClick={handleOpenModal}>
                     <ListItemText
-                        primary={name}
-                        secondary={
-                            <>
-                                <Typography
-                                    sx={{ display: 'inline', color: green[800], fontWeight: "bold"}}
-                                    component="span"
-                                    variant='body2'
-                                >
-                                    Id: {id}
-                                </Typography>
-                                { ` ${structure}` }
-                            </>
-                        }
+                        primary={`Molecule # ${id}: ${name}`}
+                        secondary={structure}
                     />
                 </ListItemButton>
             </ListItem>

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { getMolecules } from '../api/MoleculesAPI';
 import { Pagination, Typography } from '@mui/material';
 
-export function ListMolecules({molecules, setMolecules, setMolecule}) {
+export function ListMolecules({molecules, setMolecules, setMolecule, setModalMolecule, setOpen}) {
     const [totalPages, setTotalPages] = useState(0)
 
     useEffect( () => {
@@ -32,6 +32,8 @@ export function ListMolecules({molecules, setMolecules, setMolecule}) {
                         <MoleculeItem 
                             molecule={molecule}
                             setMolecule={setMolecule}
+                            setModalMolecule={setModalMolecule}
+                            setOpen={setOpen}
                             key={molecule.id}
                         />
                     )
