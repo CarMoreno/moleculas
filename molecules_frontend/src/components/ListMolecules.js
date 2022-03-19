@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 import { getMolecules } from '../api/MoleculesAPI';
 import { Pagination, Typography } from '@mui/material';
 
-export function ListMolecules() {
-    const [molecules, setMolecules] = useState([])
+export function ListMolecules({molecules, setMolecules, setMolecule}) {
     const [totalPages, setTotalPages] = useState(0)
 
     useEffect( () => {
@@ -27,10 +26,14 @@ export function ListMolecules() {
     return (
         <>
             <Typography variant="h5" sx={ {marginTop: 5, textAlign:"center"}}>List of Molecules</Typography>
-            <List sx={{ width: '100%', bgcolor: 'background.paper', margin: "2% auto 0% auto" }}>
+            <List sx={{ width: '80%', bgcolor: 'background.paper', margin: "2% auto 0% auto" }}>
             { molecules.map( molecule => {
                     return (
-                        <MoleculeItem molecule={molecule} key={molecule.id}/>
+                        <MoleculeItem 
+                            molecule={molecule}
+                            setMolecule={setMolecule}
+                            key={molecule.id}
+                        />
                     )
             })}
                 <Pagination 
