@@ -1,6 +1,7 @@
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, List, ListItemText, Modal, Typography } from "@mui/material";
-import { red } from "@mui/material/colors";
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Divider, List, ListItemText, Modal, Typography } from "@mui/material";
+import { red, grey } from "@mui/material/colors";
 import React from "react"
+import MoleculeStructure from "./third-party-components/MoleculeStructure";
 
 const style = {
     position: 'absolute',
@@ -26,17 +27,18 @@ export function MoleculeDetail({open, setOpen, modalMolecule}) {
             >
                 <Card sx={style}>
                     <CardActionArea>
-                        <CardMedia
-                            component="img"
-                            height="200"
-                            image="http://via.placeholder.com/640x140"
-                            alt="green iguana"
+                        <MoleculeStructure
+                            id="structure-example-svg-aspirin"
+                            structure={structure}
+                            width={350}
+                            height={300}
                         />
+                        <Divider/>
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
                                 {name}
                             </Typography>
-                            <List>
+                            <List >
                                 <ListItemText>
                                     <Typography variant="body2" color="text.secondary">
                                         <strong>Structure:</strong> <Typography variant="body2" sx={{color: red[400]}}>{structure} {""}</Typography>
@@ -49,11 +51,6 @@ export function MoleculeDetail({open, setOpen, modalMolecule}) {
                                     </Typography>
                                 </ListItemText>
                             </List>
-                            {/* <Typography variant="body2" color="text.secondary">
-                                <strong>Max phase:</strong> {max_phase} {""}
-                                <strong>Structure</strong> {structure} {""}
-                                <strong>Inchi key:</strong> {inchi_key} {""}
-                            </Typography> */}
                         </CardContent>
                     </CardActionArea>
                     <CardActions>

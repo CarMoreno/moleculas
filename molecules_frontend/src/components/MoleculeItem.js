@@ -3,7 +3,6 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Divider from '@mui/material/Divider';
 import Avatar from '@mui/material/Avatar';
-import { useState } from 'react';
 import { green } from '@mui/material/colors';
 import { Biotech, ArrowForward } from '@mui/icons-material';
 import { IconButton, ListItemButton } from '@mui/material';

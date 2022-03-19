@@ -33,7 +33,7 @@ export const ListActivities = ({activities, setActivities, molecule}) => {
         <>
             {activities && activities.length ? (
                 <>
-                    <Typography variant="h5" sx={ {marginTop: "5px", textAlign:"center"}}>List of Activities </Typography>
+                    <Typography variant="h5" sx={ {marginTop: "5px", textAlign:"center"}}>List of Activities to Molecule # {molecule.id} </Typography>
                     <List sx={{ width: '80%', bgcolor: 'background.paper', margin: "2% auto 0% auto" }}>
                     { activities.map( activity => {
                             return (
@@ -51,7 +51,7 @@ export const ListActivities = ({activities, setActivities, molecule}) => {
             ): 
                 <>
                     <Typography variant="h5" sx={ {marginTop: "5px", textAlign:"center"}}>List of Activities </Typography>
-                    <List sx={{ width: '80%', bgcolor: 'background.paper', margin: "2% auto 0% auto" }}>
+                    <List sx={{ width: '80%', bgcolor: 'background.paper', margin: "2% auto 0% auto", padding: "3px" }}>
                         <ListItemText>
                             <Typography align='center'>Please, click on arrow icon to see activities related to a specific molecule</Typography>
                         </ListItemText>

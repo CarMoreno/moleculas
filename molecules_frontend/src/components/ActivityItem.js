@@ -1,12 +1,11 @@
-import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Divider from '@mui/material/Divider';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import { green, brown } from '@mui/material/colors';
-import {ArrowForward, Biotech } from '@mui/icons-material';
-import { IconButton, ListItem } from '@mui/material';
+import { EmojiNature } from '@mui/icons-material';
+import { ListItem } from '@mui/material';
 
 export function ActivityItem({activity}) {
     const {id, organism, relation, target_name, type, units, value} = activity
@@ -15,7 +14,7 @@ export function ActivityItem({activity}) {
             <ListItem>
                 <ListItemAvatar>
                     <Avatar sx={{ bgcolor: brown[500] }} >
-                        <Biotech />
+                        <EmojiNature />
                     </Avatar>
                 </ListItemAvatar>
                 <ListItemText

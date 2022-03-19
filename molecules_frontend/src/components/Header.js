@@ -5,14 +5,12 @@ import Typography from '@mui/material/Typography';
 
 export function Header(props) {
     return (
-        <Box sx={{ flexGrow: 1 }} >
-            <AppBar position="static" color="success">
-                <Toolbar >
-                    <Typography variant="h4" component="div" sx={{ flexGrow: 1 }} textAlign="center">
-                        Molecules App
-                    </Typography>
-                </Toolbar>
-            </AppBar>
-        </Box>
+        <AppBar position="static" color="success">
+            <Toolbar >
+                <Typography variant="h4" component="div" sx={{ flexGrow: 1 }} textAlign="center">
+                    Molecules App
+                </Typography>
+            </Toolbar>
+        </AppBar>
     )
 }
