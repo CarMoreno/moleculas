@@ -22,18 +22,18 @@ It was utilized _material_ components to sketch the interface. The following are
 
 #### List Molecules
 
-![molecules.png](molecules.png)
+![molecules.png](readme_images/molecules.png)
 
 #### List Activities by Molecule
 
-![activities.png](activities.png)
+![activities.png](readme_images/activities.png)
 
 #### Detailed molecule
-![detailed_molecule.png](detailed_molecule.png)
+![detailed_molecule.png](readme_images/detailed_molecule.png)
 
 
 #### All together
-![all_together.gif](all_together.gif)
+![all_together.gif](readme_images/all_together.gif)
 
 
 ### How to run the application?
