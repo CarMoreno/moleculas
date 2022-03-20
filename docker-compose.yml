@@ -6,6 +6,9 @@ services:
     command: python manage.py runserver 0.0.0.0:8000
     build:
       context: ./molecules_project/
+      args:
+        DJANGO_ALLOWED_HOSTS: 0.0.0.0 127.0.0.1 localhost
+        DJANGO_CORS_ORIGIN_WHITELIST: http://localhost:3000 http://127.0.0.1:3000
       dockerfile: Dockerfile
     ports:
       - 8000:8000
