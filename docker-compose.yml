@@ -1,0 +1,34 @@
+version: '3'
+services:
+  project:
+    restart: always
+    container_name: molecules_backend
+    command: python manage.py runserver 0.0.0.0:8000
+    build:
+      context: ./molecules_project/
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    networks:
+      - db-net
+
+  frontend:
+    restart: always
+    command: yarn start
+    container_name: molecules_frontend
+    build:
+      context: ./molecules_frontend/
+      args:
+        API_URL: http://127.0.0.1:8000
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    stdin_open: true
+    depends_on:
+      - project
+    networks:
+      - db-net
+
+networks:
+  db-net:
+    driver: bridge

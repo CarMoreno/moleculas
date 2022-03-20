@@ -1,6 +1,6 @@
 # Molecules App
 
-This app uses Django rest framework and ReactJS. It uses The [Material UI library](https://mui.com) to sketch an interface utilizing 
+This app uses Django rest framework and ReactJS with the [Material UI library](https://mui.com) to sketch an interface utilizing 
 material components. Finally, the [RDKit library](https://github.com/MichelML/rdkit-js) is used to build molecules images.
 
 ### About Endpoints
@@ -37,3 +37,9 @@ It was utilized _material_ components to sketch the interface. The following are
 
 
 ### How to run the application?
+- Open a new terminal and run `docker-compose up`. This command will create two containers: `molecules_frontend` 
+and `molecules_backend`.
+- Once the command has finished, open the browser and go to `http://localhost:3000`
+
+Finally, I have used Docker version 20.10.6, docker-compose version 1.29.1, and Windows 10 to test the deployment process.
+

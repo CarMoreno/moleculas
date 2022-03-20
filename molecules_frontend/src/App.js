@@ -4,7 +4,6 @@ import { Header } from "./components/Header";
 import { ListActivities } from "./components/ListActivities";
 import { ListMolecules } from "./components/ListMolecules";
 import { MoleculeDetail } from "./components/MoleculeDetail";
-import MoleculeStructure from "./components/third-party-components/MoleculeStructure";
 
 function App() {
     const [molecules, setMolecules] = useState([])

@@ -1,11 +1,9 @@
 import List from '@mui/material/List';
 import { ActivityItem } from './ActivityItem';
 import { useEffect, useState } from "react";
-import { getActivities, getMolecules } from '../api/MoleculesAPI';
-import { Avatar, Grid, ListItem, ListItemAvatar, ListItemIcon, Pagination, Paper, Typography } from '@mui/material';
+import { getActivities } from '../api/MoleculesAPI';
+import { Pagination, Typography } from '@mui/material';
 import { ListItemText } from '@material-ui/core';
-import { Image, Work } from '@material-ui/icons';
-import { BeachAccess } from '@mui/icons-material';
 
 export const ListActivities = ({activities, setActivities, molecule}) => {
     const [totalPages, setTotalPages] = useState(0)

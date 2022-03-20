@@ -1,5 +1,5 @@
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Divider, List, ListItemText, Modal, Typography } from "@mui/material";
-import { red, grey } from "@mui/material/colors";
+import { Button, Card, CardActionArea, CardActions, CardContent, Divider, List, ListItemText, Modal, Typography } from "@mui/material";
+import { red } from "@mui/material/colors";
 import React from "react"
 import MoleculeStructure from "./third-party-components/MoleculeStructure";
 
