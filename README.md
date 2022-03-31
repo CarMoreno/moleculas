@@ -44,4 +44,7 @@ It was utilized _material_ components to sketch the interface. The following are
 and `molecules_backend`.
 - Once the command has finished, open the browser and go to `http://localhost:3000`
 
+#### Running the application
+![docker_execution.gif](readme_images/docker_execution.gif)
+
 Finally, I have used Docker version 20.10.6, docker-compose version 1.29.1, and Windows 10 to test the deployment process.
