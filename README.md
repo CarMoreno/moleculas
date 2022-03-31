@@ -37,9 +37,11 @@ It was utilized _material_ components to sketch the interface. The following are
 
 
 ### How to run the application?
-- Open a new terminal and run `docker-compose up`. This command will create two containers: `molecules_frontend` 
+- Clone or Download this repository.
+- Open a new terminal:
+  - `cd molecules`
+  - `docker-compose up`, this command will create two containers: `molecules_frontend` 
 and `molecules_backend`.
 - Once the command has finished, open the browser and go to `http://localhost:3000`
 
 Finally, I have used Docker version 20.10.6, docker-compose version 1.29.1, and Windows 10 to test the deployment process.
-
